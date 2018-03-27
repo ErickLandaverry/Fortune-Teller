@@ -13,7 +13,7 @@ export default class App extends Component {
             Fill out the fields below and click the generate buttom<br/> to see the Mad Lib story.
             </div>
           </div>  
-          <MadlibForm />
+          <MadlibForm name ="Erick"/>
         </div>
       </div>
     );
