@@ -60,6 +60,27 @@ class MadlibForm extends Component {
                 this.setState({completedForm: true});
                 event.preventDefault();
             }.bind(this);
+
+    handleClick = function() {
+        this.setState({
+            completedForm: false,
+            color: '',
+            pluralNoun: '',
+            adjectiveOne: '',
+            celebrityOne: '',
+            adjectiveTwo: '',
+            nounOne: '',
+            numberOne: '',
+            numberTwo: '',
+        });
+    }.bind(this)
+
+    renderButton = function() {
+        if(this.state.completedForm) {
+            return <a className="clear-button" onClick={this.handleClick}>Clear Mad Lib</a>
+        }
+        return <input type="submit" className="generate-button" value="Generate Mad Lib" /> 
+            }       
     render() {
 
         this.inputData = [
@@ -88,7 +109,7 @@ class MadlibForm extends Component {
                     </Row>
                     <Row>
                         <Col md="12" className="button-wrapper">
-                            <input type="submit" className="generate-button" value="Generate Mad Lib" />
+                            {this.renderButton()}
                         </Col>
                     </Row>
                 </form>
