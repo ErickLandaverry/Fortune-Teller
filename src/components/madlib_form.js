@@ -11,7 +11,7 @@ import MadlibContent from './madlib_content';
 
 function MadlibInput(props) {
     return (
-        <Col md="3" className='input-wrapper'>
+        <Col md="4" className='input-wrapper'>
             <Row>
                 <Col md="2">
                 <label className="green-label">{props.index}</label>
@@ -37,22 +37,11 @@ class MadlibForm extends Component {
 
         this.state ={
             completedForm:false,
-            color: '',
-            pluralNoun: '',
-            adjectiveOne: '',
-            celebrityOne: '',
-            adjectiveTwo: '',
-            nounOne: '',
-            numberOne: '',
-            numberTwo: '',
-            nounTwo: '',
-            adjectiveThree: '',
-            celebrityTwo:'',
-            celebrityThree: '',
-            adjectiveFour: '',
-            nounThree: '',
-            celebrityFour: '',
-            adjectiveFive: ''
+            name: '',
+            location: '',
+            car: '',
+            job: '',
+            horoscope: '',
 
 
         }
@@ -74,53 +63,34 @@ class MadlibForm extends Component {
     handleClick = function() {
         this.setState({
             completedForm: false,
-            color: '',
-            pluralNoun: '',
-            adjectiveOne: '',
-            celebrityOne: '',
-            adjectiveTwo: '',
-            nounOne: '',
-            numberOne: '',
-            numberTwo: '',
-            nounTwo: '',
-            adjectiveThree: '',
-            celebrityTwo:'',
-            celebrityThree: '',
-            adjectiveFour: '',
-            nounThree: '',
-            celebrityFour: '',
-            adjectiveFive: ''
+            name: '',
+            location: '',
+            car: '',
+            job: '',
+            horoscope: '',
+            secretCrush: '',
         });
     }.bind(this)
 
     renderButton = function() {
         if(this.state.completedForm) {
-            return <a className="clear-button" onClick={this.handleClick}>Clear Mad Lib</a>
+            return <a className="clear-button" onClick={this.handleClick}>Too Much? Clear Fortune</a>
         }
-        return <input type="submit" className="generate-button" value="Generate Mad Lib" /> 
+        return <input type="submit" className="generate-button" value="Tell Me My Fortune" /> 
             }       
     render() {
 
         this.inputData = [
-                        {placeholder: 'Color', prop: 'color', state: this.state.color},
-                        {placeholder: 'Noun (Plural)', prop: 'pluralNoun', state: this.state.pluralNoun},
-                        {placeholder: 'Adjective', prop: 'adjectiveOne', state: this.state.adjectiveOne},
-                        {placeholder: 'Celebrity', prop: 'celebrityOne', state: this.state.celebrityOne},
+                        {placeholder: 'Name', prop: 'name', state: this.state.color},
+                        {placeholder: 'Location', prop: 'location', state: this.state.pluralNoun},
+                        {placeholder: 'Car', prop: 'car', state: this.state.adjectiveOne},
+                        {placeholder: 'Job', prop: 'job', state: this.state.celebrityOne},
+
+                        {placeholder: 'Horoscope', prop: 'horoscope', state: this.state.color},
+                        {placeholder: 'High School Crush', prop: 'secretCrush', state: this.state.color},
+                        
             
-                        {placeholder: 'Adjective', prop: 'adjectiveTwo', state: this.state.adjectiveTwo},
-                        {placeholder: 'Noun', prop: 'nounOne', state: this.state.nounOne},
-                        {placeholder: 'Number', prop: 'numberOne', state: this.state.numberOne},
-                        {placeholder: 'Number', prop: 'numberTwo', state: this.state.numberTwo},
-
-                        {placeholder: 'Noun', prop: 'nounTwo', state: this.state.nounTwo},
-                        {placeholder: 'Adjective', prop: 'adjectiveThree', state: this.state.adjectiveThree},
-                        {placeholder: 'Celebrity', prop: 'celebrityTwo', state: this.state.celebrityTwo},
-                        {placeholder: 'Celebrity', prop: 'celebrityThree', state: this.state.celebrityThree},
-
-                        {placeholder: 'Adjective', prop: 'adjectiveFour', state: this.state.adjectiveFour},
-                        {placeholder: 'Noun', prop: 'nounThree', state: this.state.nounThree},
-                        {placeholder: 'Celebrity', prop: 'celebrityFour', state: this.state.celebrityFour},
-                        {placeholder: 'Adjective', prop: 'adjectiveFive', state: this.state.adjectiveFive},
+                        
             
                     ]
    

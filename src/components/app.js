@@ -8,9 +8,10 @@ export default class App extends Component {
       <div>
         <div className="backgroundSkew">
           <div className="madlib-heading">
-            <h1>Bottega Mad Libs</h1>
+            <h1>Fortune Teller</h1>
             <div className="madlib-subheading">
-            Fill out the fields below and click the generate buttom<br/> to see the Mad Lib story.
+            No need to have someone read your palms. This fortune-teller has been proven to be 99% correct!
+            <h3>Enter your current and/or desireable objects</h3>
             </div>
           </div>  
           <MadlibForm name ="Erick"/>
