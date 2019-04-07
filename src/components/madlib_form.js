@@ -39,9 +39,9 @@ class MadlibForm extends Component {
             completedForm:false,
             name: '',
             location: '',
-            car: '',
-            job: '',
-            horoscope: '',
+            gift1: '',
+            gift2: '',
+            Reason: '',
 
 
         }
@@ -65,29 +65,29 @@ class MadlibForm extends Component {
             completedForm: false,
             name: '',
             location: '',
-            car: '',
-            job: '',
-            horoscope: '',
-            secretCrush: '',
+            gift1: '',
+            gift2: '',
+            reason1: '',
+            reason2: '',
         });
     }.bind(this)
 
     renderButton = function() {
         if(this.state.completedForm) {
-            return <a className="clear-button" onClick={this.handleClick}>Too Much? Clear Fortune</a>
+            return <a className="clear-button" onClick={this.handleClick}>Feel like you're telling a lie? Clear List</a>
         }
-        return <input type="submit" className="generate-button" value="Tell Me My Fortune" /> 
+        return <input type="submit" className="generate-button" value="Send Santa your letter" /> 
             }       
     render() {
 
         this.inputData = [
                         {placeholder: 'Name', prop: 'name', state: this.state.color},
                         {placeholder: 'Location', prop: 'location', state: this.state.pluralNoun},
-                        {placeholder: 'Car', prop: 'car', state: this.state.adjectiveOne},
-                        {placeholder: 'Job', prop: 'job', state: this.state.celebrityOne},
+                        {placeholder: 'Gift 1', prop: 'gift1', state: this.state.adjectiveOne},
+                        {placeholder: 'Gift 2', prop: 'gift2', state: this.state.celebrityOne},
 
-                        {placeholder: 'Horoscope', prop: 'horoscope', state: this.state.color},
-                        {placeholder: 'High School Crush', prop: 'secretCrush', state: this.state.color},
+                        {placeholder: 'Reason 1', prop: 'reason1', state: this.state.color},
+                        {placeholder: 'Reason 2', prop: 'reason2', state: this.state.color},
                         
             
                         

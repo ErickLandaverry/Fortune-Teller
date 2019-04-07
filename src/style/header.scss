@@ -1,7 +1,7 @@
 .backgroundSkew {
     width: 100vw;
     
-    background-color: #000000;
+    background-color: red;
     background-image: url("http://st.gde-fon.com/wallpapers_original/305628_tekstury_chernye_serye_1920x1080_www.Gde-Fon.com.jpg")
     
 }
@@ -10,13 +10,15 @@
     text-align: center;
     margin: 20px;
     padding-top: 46px;
-    color: white;
+    color: green;
     font-weight: bold;
     font-family: $font-primary;
+    text-decoration-color: green;
 }
 
 .madlib-heading {
     margin-bottom: 46px;
     color: rgba(255, 57, 57, 0.75);
     font-size: 15px;
+    color:whitesmoke;
 }

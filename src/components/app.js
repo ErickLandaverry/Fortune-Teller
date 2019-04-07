@@ -8,10 +8,10 @@ export default class App extends Component {
       <div>
         <div className="backgroundSkew">
           <div className="madlib-heading">
-            <h1>Fortune Teller</h1>
+            <h1>Santa's list</h1>
             <div className="madlib-subheading">
-            No need to have someone read your palms. This fortune-teller has been proven to be 99% correct!
-            <h3>Enter your current and/or desireable objects</h3>
+            Tell santa what you want for christmas and why!
+            <h3>Fill in the blanks</h3>
             </div>
           </div>  
           <MadlibForm name ="Erick"/>
